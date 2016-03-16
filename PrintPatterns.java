@@ -119,7 +119,7 @@ public class PrintPatterns{
 			System.out.println();
 		}
 	}
-	
+	//code to print diamond shape.
 	public void pattern10(){
 		int row=5,col=5;
 		for(int i=1;i<=row;i++){
