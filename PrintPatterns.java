@@ -217,6 +217,36 @@ public class PrintPatterns{
 				System.out.println();
 		}
 	}
+	// code to print pattern diagonally. 
+	public void pattern14(){
+		int row=5,col=5;
+		for(int i=1;i<=row;i++){
+			for(int j=1;j<=col;j++){
+				if(i==j)
+					System.out.print("*");
+				else
+					System.out.print(" ");
+			}
+			System.out.println();
+		}
+	}
+	
+	// Code to print chess board
+	public void printChess(){
+		int row=2,col=4;
+		for(int i=1;i<=row ;i++){
+			for(int j=1;j<=col;j++){
+				if((i%2!=0&&j%2!=0)||(i%2==0&&j%2==0))
+					System.out.print("white");
+				else
+					System.out.print("black");
+			}
+			System.out.println();
+		}
+		
+		
+	}
+	
 	
 	
 	public static void main(String[] args){
@@ -234,5 +264,7 @@ public class PrintPatterns{
 		obj.pattern11();
 		obj.pattern12();
 		obj.pattern13();
+		obj.pattern14();
+		obj.printChess();
 	}
 }
