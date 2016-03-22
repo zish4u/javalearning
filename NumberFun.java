@@ -15,13 +15,14 @@ class NumberFun{
 	
 	//Method to print factorial of given number.
 	
-	public void printFactorial(int n){
+	public int findFactorial(int n){
 			int fact=1;
 			System.out.print("Factorial of "+n+ " is ");
 		for(int i=1;i<=n;i++){
 			fact=fact*i;
 		}
-		System.out.println(fact);
+		//System.out.println(fact);
+		return fact;
 	}
 	
 	//Method to extract given number.
@@ -83,11 +84,15 @@ class NumberFun{
 	public void decimalToBinary(int n){
 	    int r=0;
 		System.out.print("Decimal to binary is ");
+		String binary="";
 		while(n>0){
 			r=n%2;
 			n=n/2;
-			System.out.print(r);
+			binary=binary+r;
 	    }
+		System.out.print(binary);
+		
+		
 		//System.out.print("Decimal to binary is "+n);
 		//System.out.print(n);
 	}
@@ -95,14 +100,12 @@ class NumberFun{
 	public static void main(String[] args){
 		NumberFun obj=new NumberFun();
 			obj.printFibonacci(9);
-			obj.printFactorial(9);
+			System.out.println(obj.findFactorial(5));
 			obj.extractDigit(123);
 			System.out.println("Sum of extracted digit of 123 is " +obj.sumOfDigit(123));
 			obj.isArmstrong(371);
 			obj.reverseNumber(1245);
-			obj.decimalToBinary(3);
-			
-			
+			obj.decimalToBinary(10);
 			
 	}
 }
